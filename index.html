@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7a3b2e">
+<meta name="description" content="Higher English Grammar — Phrases, Clauses, Sentences & Analysis. Bilingual (English + Bengali) study companion.">
+<title>Higher English Grammar — Phrases, Clauses & Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f2ecdd; --paper-2:#eae1cb; --ink:#2b2417; --ink-soft:#5a5240; --ink-faint:#8a8065;
+  --rule-line:#c9bd9c; --accent:#7a3b2e; --accent-2:#3e5c45; --gold:#a3792f;
+  --card-bg:#fbf8f0; --card-border:#d8cca8; --shadow:rgba(43,36,23,0.12); --folio:#b99a52;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1c1913; --paper-2:#242018; --ink:#e9e0c9; --ink-soft:#c3b89a; --ink-faint:#8c8265;
+    --rule-line:#4a4432; --accent:#e0876c; --accent-2:#8fc19d; --gold:#d9ac5c;
+    --card-bg:#231f17; --card-border:#443d2c; --shadow:rgba(0,0,0,0.4); --folio:#c99a4d;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1c1913; --paper-2:#242018; --ink:#e9e0c9; --ink-soft:#c3b89a; --ink-faint:#8c8265;
+  --rule-line:#4a4432; --accent:#e0876c; --accent-2:#8fc19d; --gold:#d9ac5c;
+  --card-bg:#231f17; --card-border:#443d2c; --shadow:rgba(0,0,0,0.4); --folio:#c99a4d;
+}
+html{scroll-padding-top:calc(96px + env(safe-area-inset-top,0px));}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:'Source Serif 4', Georgia, serif; font-size:16px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.bn{font-family:'Hind Siliguri','Source Serif 4',serif;}
+h1,h2,h3,h4,.display{font-family:'Fraunces','Source Serif 4',serif;}
+::selection{background:var(--gold); color:#1c1913;}
+header.topbar{
+  position:sticky; top:0; z-index:50;
+  background:linear-gradient(var(--paper), var(--paper) 88%, transparent);
+  padding:calc(10px + env(safe-area-inset-top,0px)) 14px 8px;
+  border-bottom:1px solid var(--rule-line);
+}
+.brand-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px;}
+.brand{font-family:'Fraunces',serif; font-weight:700; font-style:italic; font-size:1.28rem; color:var(--accent);}
+.brand small{display:block; font-family:'Source Serif 4',serif; font-style:normal; font-weight:400; font-size:0.68rem; color:var(--ink-faint); margin-top:1px;}
+.top-actions{display:flex; gap:6px; align-items:center;}
+#langToggle,#themeToggle{
+  border:1px solid var(--gold); background:transparent; color:var(--gold);
+  font-family:'Hind Siliguri','Source Serif 4',serif; font-size:0.85rem; font-weight:600;
+  padding:6px 12px; border-radius:999px; cursor:pointer;
+}
+#themeToggle{padding:6px 10px; font-size:1rem;}
+#langToggle:active,#themeToggle:active{background:var(--gold); color:var(--paper);}
+nav.chapters{display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:10px; padding-bottom:8px; scrollbar-width:none;}
+nav.chapters::-webkit-scrollbar{display:none;}
+nav.chapters button{
+  flex:0 0 auto; white-space:nowrap; font-family:'Fraunces',serif; font-size:0.86rem; font-weight:600;
+  background:transparent; border:1px solid var(--rule-line); color:var(--ink-soft);
+  padding:7px 13px; border-radius:5px; cursor:pointer;
+}
+nav.chapters button .num{color:var(--folio); margin-right:5px; font-style:italic;}
+nav.chapters button.active{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+nav.chapters button.active .num{color:var(--gold);}
+main{max-width:720px; margin:0 auto; padding:18px 16px 60px;}
+.chapter{display:none;}
+.chapter.active{display:block; animation:fade .25s ease;}
+@keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+.chapter-head{margin-bottom:22px;}
+.chapter-head .kicker{color:var(--folio); font-weight:600; letter-spacing:0.3px; font-size:0.82rem;}
+.chapter-head h1{margin:4px 0 6px; font-size:1.7rem; font-weight:700; line-height:1.2;}
+.chapter-head .sub{color:var(--ink-soft); font-size:0.95rem;}
+.article{position:relative; margin:0 0 26px; padding-left:38px;}
+.article::before{content:attr(data-art); position:absolute; left:0; top:2px; width:30px; text-align:right; font-family:'Fraunces',serif; font-style:italic; color:var(--folio); font-size:0.82rem;}
+.article h3{margin:0 0 8px; font-size:1.12rem; font-weight:600;}
+.article p{margin:0 0 10px;}
+.rule{background:var(--card-bg); border:1px solid var(--card-border); border-left:4px solid var(--accent); border-radius:3px; padding:12px 14px; margin:10px 0; font-size:0.98rem;}
+.rule .bn{display:none; color:var(--ink-soft); margin-top:8px; padding-top:8px; border-top:1px dashed var(--card-border); font-size:0.95rem;}
+[data-lang="bn"] .rule .bn{display:block;}
+.examples{margin:8px 0 14px; padding:0; list-style:none;}
+.examples li{padding:5px 0 5px 16px; position:relative;}
+.examples li::before{content:"—"; position:absolute; left:0; color:var(--folio);}
+.examples code{background:var(--paper-2); padding:1px 5px; border-radius:3px; font-family:inherit; font-style:italic;}
+.note{background:var(--paper-2); border:1px dashed var(--rule-line); border-radius:3px; padding:10px 13px; margin:10px 0; font-size:0.92rem; color:var(--ink-soft);}
+.note strong{color:var(--ink);}
+.table-wrap{overflow-x:auto; margin:12px 0; border:1px solid var(--card-border); border-radius:4px;}
+table{border-collapse:collapse; width:100%; font-size:0.88rem; min-width:480px; background:var(--card-bg);}
+table caption{caption-side:top; text-align:left; padding:8px 10px; font-style:italic; color:var(--ink-soft); font-size:0.85rem;}
+th,td{border:1px solid var(--card-border); padding:7px 9px; text-align:left; vertical-align:top;}
+th{background:var(--paper-2); font-weight:600;}
+.worked{border:1px solid var(--card-border); border-radius:4px; margin:10px 0; overflow:hidden;}
+.worked > summary{cursor:pointer; padding:9px 12px; background:var(--paper-2); font-weight:600; font-size:0.92rem; list-style:none;}
+.worked > summary::-webkit-details-marker{display:none;}
+.worked > summary::before{content:"▸ "; color:var(--folio);}
+.worked[open] > summary::before{content:"▾ ";}
+.worked .body{padding:10px 14px; font-size:0.92rem;}
+.worked ol{margin:6px 0; padding-left:20px;}
+.worked li{margin-bottom:4px;}
+.divider{border:none; border-top:1px solid var(--rule-line); margin:28px 0;}
+.qb-toc{display:grid; grid-template-columns:1fr; gap:8px; margin-bottom:22px;}
+.qb-toc a{display:flex; justify-content:space-between; gap:10px; align-items:baseline; padding:10px 12px; border:1px solid var(--card-border); border-radius:4px; background:var(--card-bg); text-decoration:none; color:var(--ink); font-size:0.92rem;}
+.qb-toc a .ex-no{color:var(--folio); font-weight:700; font-family:'Fraunces',serif; font-style:italic; flex:0 0 auto;}
+.qb-toc a .ex-topic{flex:1;}
+.qb-toc a .ex-topic .bn{display:none; color:var(--ink-faint); font-size:0.82rem;}
+[data-lang="bn"] .qb-toc a .ex-topic .bn{display:block;}
+.exercise-group{border:1px solid var(--card-border); border-radius:5px; margin-bottom:16px; overflow:hidden; scroll-margin-top:110px;}
+.exercise-group > .eg-head{padding:12px 14px; background:var(--paper-2); border-bottom:1px solid var(--card-border);}
+.exercise-group > .eg-head .ex-label{color:var(--folio); font-weight:700; font-family:'Fraunces',serif; font-style:italic; font-size:0.95rem;}
+.exercise-group > .eg-head h3{margin:2px 0 0; font-size:1.02rem;}
+.exercise-group > .eg-head .bn{display:none; font-size:0.86rem; color:var(--ink-soft); margin-top:3px;}
+[data-lang="bn"] .exercise-group > .eg-head .bn{display:block;}
+.part{border-top:1px solid var(--card-border);}
+.part:first-of-type{border-top:none;}
+.part > summary{cursor:pointer; list-style:none; padding:10px 14px; font-size:0.9rem; display:flex; gap:8px; align-items:baseline;}
+.part > summary::-webkit-details-marker{display:none;}
+.part > summary::before{content:"▸"; color:var(--gold); flex:0 0 auto;}
+.part[open] > summary::before{content:"▾";}
+.part > summary .plabel{font-weight:600; color:var(--accent);}
+.part-body{padding:0 14px 14px 30px;}
+.part-body .instr{color:var(--ink-soft); font-size:0.88rem; margin:0 0 8px; font-style:italic;}
+.count-tag{margin-left:auto; color:var(--ink-faint); font-size:0.78rem; flex:0 0 auto;}
+.qitem-list{list-style:none; margin:0; padding:0; counter-reset:qnum;}
+.qitem{counter-increment:qnum; padding:10px 0; border-bottom:1px dashed var(--card-border);}
+.qitem:last-child{border-bottom:none;}
+.qitem .qtext{font-size:0.95rem; margin-bottom:7px; padding-left:26px; position:relative;}
+.qitem .qtext::before{content:counter(qnum)"."; position:absolute; left:0; top:0; color:var(--folio); font-family:'Fraunces',serif; font-style:italic; font-weight:600; font-size:0.9rem;}
+.ans-toggle{margin-left:26px; border:1px solid var(--accent); background:transparent; color:var(--accent); font-family:'Hind Siliguri','Source Serif 4',serif; font-size:0.78rem; font-weight:600; padding:5px 11px; border-radius:999px; cursor:pointer;}
+.ans-toggle.open{background:var(--accent); color:var(--paper);}
+.ans-panel{margin:9px 0 4px 26px; padding:10px 12px; background:var(--paper-2); border-left:3px solid var(--accent-2); border-radius:3px; font-size:0.9rem; display:none;}
+.ans-panel.show{display:block;}
+.ans-panel .ans-en{margin-bottom:8px;}
+.ans-panel .ans-en::before{content:"Answer — "; font-weight:700; color:var(--accent-2);}
+.ans-panel .ans-bn{color:var(--ink-soft); padding-top:8px; border-top:1px dashed var(--card-border); line-height:1.7; display:none;}
+[data-lang="bn"] .ans-panel .ans-bn{display:block;}
+.ans-panel .ans-bn::before{content:"বাংলা ব্যাখ্যা — "; font-weight:700; color:var(--gold); display:block; margin-bottom:3px; font-family:'Hind Siliguri',serif;}
+#toTop{position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px)); width:42px; height:42px; border-radius:50%; border:1px solid var(--gold); background:var(--card-bg); color:var(--gold); font-size:1.1rem; display:none; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 2px 8px var(--shadow);}
+#toTop.show{display:flex;}
+footer.pagefoot{text-align:center; color:var(--ink-faint); font-size:0.78rem; padding:20px 0 4px;}
+</style>
+</head>
+<body>
+<div id="app" data-lang="en">
+<header class="topbar">
+  <div class="brand-row">
+    <div class="brand">A Text-Book of Higher English Grammar
+      <small data-en="Phrases · Clauses · Sentences · Analysis — bilingual study companion" data-bn="বাক্যাংশ · খণ্ডবাক্য · বাক্য · বিশ্লেষণ — দ্বিভাষিক অধ্যয়ন সহায়িকা"></small>
+    </div>
+    <div class="top-actions">
+      <button id="themeToggle" type="button" title="Toggle theme">◐</button>
+      <button id="langToggle" type="button">বাংলা</button>
+    </div>
+  </div>
+  <nav class="chapters" id="chapterNav">
+    <button data-target="phrases" class="active"><span class="num">I</span><span data-en="Phrases" data-bn="বাক্যাংশ"></span></button>
+    <button data-target="clauses"><span class="num">II</span><span data-en="Clauses" data-bn="খণ্ডবাক্য"></span></button>
+    <button data-target="sentences"><span class="num">III</span><span data-en="Sentences" data-bn="বাক্যের প্রকার"></span></button>
+    <button data-target="analysis"><span class="num">IV</span><span data-en="Analysis" data-bn="বিশ্লেষণ"></span></button>
+    <button data-target="difficulties"><span class="num">V</span><span data-en="Difficulties" data-bn="জটিল বিষয়"></span></button>
+    <button data-target="syntax"><span class="num">VI</span><span data-en="Syntax" data-bn="বাক্যরীতি"></span></button>
+    <button data-target="qbank"><span class="num">✎</span><span data-en="Question Bank" data-bn="প্রশ্নভাণ্ডার"></span></button>
+  </nav>
+</header>
+<main>
+
+<!-- PHRASES -->
+<section id="phrases" class="chapter active">
+  <div class="chapter-head">
+    <div class="kicker">Chapter XXXIII</div>
+    <h1>Phrases</h1>
+    <div class="sub" data-en="A phrase is a group of words with no subject or finite verb of its own, doing the work of a single part of speech." data-bn="Phrase হলো এমন একগুচ্ছ শব্দ যার নিজস্ব Subject বা Finite Verb নেই, কিন্তু যা বাক্যে একটি নির্দিষ্ট পদের কাজ করে।"></div>
+  </div>
+  <div class="article" data-art="406">
+    <h3>Six kinds of Phrases</h3>
+    <div class="rule"><strong>(1) Noun Phrase</strong> — does the work of a Noun.
+      <div class="bn">যে Phrase বাক্যে Noun-এর কাজ করে, তাকে Noun Phrase বলে।</div>
+    </div>
+    <ul class="examples">
+      <li><code>To ride well</code> requires practice.</li>
+      <li>He likes <code>to play tennis</code>.</li>
+      <li>He enjoys <code>walking by the river-side</code>.</li>
+    </ul>
+    <div class="rule"><strong>(2) Adjective Phrase</strong> — does the work of an Adjective.
+      <div class="bn">যে Phrase কোনো Noun/Pronoun-কে বিশেষিত করে।</div>
+    </div>
+    <ul class="examples">
+      <li>He gave me <code>a chain of gold</code> (= a gold chain).</li>
+      <li>He is <code>without fear</code> (= fearless).</li>
+      <li>The man <code>in the street</code> knows it.</li>
+    </ul>
+    <div class="note"><strong>Note —</strong> The same phrase may be Noun or Adjectival depending on use.</div>
+    <div class="rule"><strong>(3) Adverbial Phrase</strong> — does the work of an Adverb.
+      <div class="bn">যে Phrase ক্রিয়াকে বিশেষিত করে।</div>
+    </div>
+    <ul class="examples">
+      <li>He worked <code>with care</code> (= carefully).</li>
+      <li>He came <code>at a great speed</code> (= quickly).</li>
+      <li>This must be done <code>at any price</code>.</li>
+    </ul>
+    <div class="rule"><strong>(4) Prepositional Phrase</strong> — does the work of a Preposition.
+      <div class="bn">একাধিক শব্দ মিলে Preposition-এর কাজ করে।</div>
+    </div>
+    <ul class="examples">
+      <li>He stood <code>in front of</code> me.</li>
+      <li>He could not come <code>on account of</code> illness.</li>
+    </ul>
+    <div class="rule"><strong>(5) Conjunctional Phrase</strong> — does the work of a Conjunction.</div>
+    <ul class="examples">
+      <li>Come <code>as soon as</code> you can.</li>
+      <li><code>Not only</code> he <code>but</code> his brother <code>also</code> were present.</li>
+    </ul>
+    <div class="rule"><strong>(6) Interjectional Phrase</strong> — does the work of an Interjection.</div>
+    <ul class="examples">
+      <li><code>What a pity!</code> · <code>By Jove!</code> · <code>Good heavens!</code></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CLAUSES -->
+<section id="clauses" class="chapter">
+  <div class="chapter-head">
+    <div class="kicker">Chapter XXXIV</div>
+    <h1>Clauses</h1>
+    <div class="sub" data-en="A clause is a group of words with a subject and a predicate of its own, forming part of a bigger sentence." data-bn="Clause-এর নিজস্ব Subject ও Predicate আছে, কিন্তু এটি একটি বড় বাক্যের অংশ।"></div>
+  </div>
+  <div class="article" data-art="407">
+    <h3>What is a Clause?</h3>
+    <div class="rule">A Clause is a sentence forming part of a bigger sentence — a group of words having a subject and a finite verb of its own.
+      <div class="bn">একগুচ্ছ শব্দ যার নিজস্ব Subject ও Finite Verb আছে, কিন্তু যা একটি বৃহত্তর বাক্যের অংশ।</div>
+    </div>
+    <p><strong>Remember:</strong> the number of clauses equals the number of finite verbs.</p>
+  </div>
+  <div class="article" data-art="408-410">
+    <h3>Kinds of Clauses</h3>
+    <div class="rule"><strong>Principal Clause</strong> — stands by itself and makes complete sense.
+      <div class="bn">একা দাঁড়িয়ে সম্পূর্ণ অর্থ প্রকাশ করে।</div>
+    </div>
+    <div class="rule"><strong>Subordinate / Dependent Clause</strong> — depends on another clause.
+      <div class="bn">অন্য Clause-এর উপর নির্ভরশীল।</div>
+    </div>
+    <div class="rule"><strong>Co-ordinate Clause</strong> — same rank, joined by and, but, or, yet, etc.
+      <div class="bn">সমান মর্যাদার Clause, Co-ordinating Conjunction দিয়ে যুক্ত।</div>
+    </div>
+  </div>
+  <div class="article" data-art="412-413">
+    <h3>A. The Noun Clause</h3>
+    <div class="rule">Does the work of a Noun. Introduced by that, what, who, why, when, if/whether.
+      <div class="bn">Noun-এর কাজ করে — Subject, Object, Complement বা Apposition হিসেবে।</div>
+    </div>
+    <ul class="examples">
+      <li>I know <code>that he is ill</code>. (object)</li>
+      <li><code>That he is ill</code> is known to all. (subject)</li>
+      <li>I know nothing of <code>what he will do</code>. (object of preposition)</li>
+    </ul>
+  </div>
+  <div class="article" data-art="414-418">
+    <h3>B. The Adjective Clause</h3>
+    <div class="rule">Does the work of an Adjective, qualifying a noun or pronoun.
+      <div class="bn">Noun/Pronoun-কে বিশেষিত করে।</div>
+    </div>
+    <ul class="examples">
+      <li>I know the boy <code>who did it</code>.</li>
+      <li>This is the place <code>where he was born</code>.</li>
+    </ul>
+    <div class="note"><strong>Restrictive</strong> (defines) = Subordinate Adjectival. <strong>Continuative</strong> (extra detail = and he/it) = Co-ordinate.</div>
+  </div>
+  <div class="article" data-art="419-420">
+    <h3>C. The Adverbial Clause</h3>
+    <div class="rule">Does the work of an Adverb.
+      <div class="bn">ক্রিয়া/বিশেষণকে বিশেষিত করে।</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <caption>Nine kinds of Adverbial Clause</caption>
+        <thead><tr><th>Kind</th><th>Introduced by</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Time</td><td>when, while, after, before, till, since</td><td>He came <em>when I was there</em>.</td></tr>
+          <tr><td>Place</td><td>where, wherever</td><td>Stay <em>where you are</em>.</td></tr>
+          <tr><td>Reason</td><td>because, as, since</td><td>He cannot come <em>because he is ill</em>.</td></tr>
+          <tr><td>Purpose</td><td>that, so that, lest</td><td>We read <em>that we may learn</em>.</td></tr>
+          <tr><td>Result</td><td>so…that, such…that</td><td>I am so tired <em>that I cannot walk</em>.</td></tr>
+          <tr><td>Manner</td><td>as</td><td>It happened <em>as I expected</em>.</td></tr>
+          <tr><td>Condition</td><td>if, unless, provided</td><td>I shall not go <em>unless you come</em>.</td></tr>
+          <tr><td>Concession</td><td>though, although, even if</td><td><em>Though he is poor</em>, he is honest.</td></tr>
+          <tr><td>Comparison</td><td>as…as, than, the…the</td><td>He is not so tall <em>as his brother</em>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="article" data-art="421">
+    <h3>Function decides the kind</h3>
+    <ul class="examples">
+      <li>I know <code>where he lives</code> — Noun clause</li>
+      <li>I know the place <code>where he lives</code> — Adjective clause</li>
+      <li>I shall go <code>where he lives</code> — Adverbial clause</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SENTENCES -->
+<section id="sentences" class="chapter">
+  <div class="chapter-head">
+    <div class="kicker">Chapter XXXV</div>
+    <h1>Simple, Complex, Compound Sentences</h1>
+    <div class="sub" data-en="Classified by how many clauses they contain and how those clauses relate." data-bn="Clause-এর সংখ্যা ও সম্পর্ক অনুযায়ী শ্রেণিবিভাগ।"></div>
+  </div>
+  <div class="article" data-art="423">
+    <h3>Simple Sentence</h3>
+    <div class="rule">Only one subject and one finite verb.
+      <div class="bn">মাত্র একটি Subject ও একটি Finite Verb।</div>
+    </div>
+    <ul class="examples"><li>I came home yesterday.</li><li>Barking dogs seldom bite.</li></ul>
+  </div>
+  <div class="article" data-art="424">
+    <h3>Complex Sentence</h3>
+    <div class="rule">One Principal Clause + one or more Subordinate Clauses.
+      <div class="bn">একটি Principal + এক বা একাধিক Subordinate Clause।</div>
+    </div>
+    <div class="worked"><summary>Worked example — <em>As you are rich, you must help those who are poor.</em></summary>
+      <div class="body"><ol>
+        <li><strong>As you are rich</strong> — Subordinate Adverbial</li>
+        <li><strong>you must help those</strong> — Principal</li>
+        <li><strong>who are poor</strong> — Subordinate Adjective</li>
+      </ol></div>
+    </div>
+  </div>
+  <div class="article" data-art="425-426">
+    <h3>Compound Sentence</h3>
+    <div class="rule">Two or more independent Principal clauses joined by co-ordinating conjunctions.
+      <div class="bn">দুই বা ততোধিক Principal Clause, Co-ordinating Conjunction দিয়ে যুক্ত।</div>
+    </div>
+  </div>
+  <div class="article" data-art="429">
+    <h3>Complex or Compound? The test</h3>
+    <p>Depends on the number of <strong>Principal</strong> clauses. Independent co-ordinates → Compound; subordinate → Complex.</p>
+  </div>
+</section>
+
+<!-- ANALYSIS -->
+<section id="analysis" class="chapter">
+  <div class="chapter-head">
+    <div class="kicker">Chapters XXXVI – XXXVII</div>
+    <h1>Analysis of Sentences</h1>
+    <div class="sub" data-en="Divides a sentence into parts according to the work each part does." data-bn="প্রতিটি অংশের কাজ অনুযায়ী বাক্য বিভাজন।"></div>
+  </div>
+  <div class="article" data-art="430">
+    <h3>The Parts of a Sentence</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Group</th><th>Parts</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Subject group</strong></td><td>Subject · Adjuncts to Subject</td></tr>
+        <tr><td><strong>Predicate group</strong></td><td>Predicate-verb · Object · Complements · Adverbial Adjuncts</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="article" data-art="436">
+    <h3>Analysing a Simple Sentence</h3>
+    <ol>
+      <li>Find the Finite Verb → Predicate</li>
+      <li>Find the Subject</li>
+      <li>Note Adjuncts of the Subject</li>
+      <li>Note Object(s) if transitive</li>
+      <li>Note Complement(s)</li>
+      <li>Note Adverbial Adjuncts</li>
+    </ol>
+  </div>
+  <div class="article" data-art="437">
+    <h3>Analysing a Complex Sentence</h3>
+    <ol>
+      <li>Divide into as many clauses as finite verbs</li>
+      <li>Find the Principal clause</li>
+      <li>Classify each subordinate (Noun / Adjective / Adverbial)</li>
+      <li>Show relations</li>
+    </ol>
+  </div>
+  <div class="article" data-art="438">
+    <h3>Analysing a Compound Sentence</h3>
+    <ol>
+      <li>Break into clauses by finite verbs</li>
+      <li>Identify principal co-ordinate clauses</li>
+      <li>Identify any subordinate clauses and relations</li>
+    </ol>
+  </div>
+</section>
+
+<!-- DIFFICULTIES -->
+<section id="difficulties" class="chapter">
+  <div class="chapter-head">
+    <div class="kicker">Chapter XXXVIII</div>
+    <h1>A Few Difficulties in Analysis</h1>
+    <div class="sub" data-en="Quotations, parentheses, 'it', ellipsis, 'as', and 'what'." data-bn="উদ্ধৃতি, Parenthesis, 'it', Ellipsis, 'as' ও 'what'।"></div>
+  </div>
+  <div class="article" data-art="439">
+    <h3>Quoted Sentences</h3>
+    <p>A quotation is <strong>not</strong> a Noun Clause. Treat it as a noun-equivalent object of the reporting verb — so <em>He said, "I am ill"</em> is <strong>Simple</strong>.</p>
+  </div>
+  <div class="article" data-art="440">
+    <h3>Parenthetic Expressions</h3>
+    <p>In <em>"He is the man who, I believe, did it,"</em> — <em>I believe</em> is a Parenthetic Clause, not Principal or Subordinate.</p>
+  </div>
+  <div class="article" data-art="444">
+    <h3>The Use of 'It'</h3>
+    <ul class="examples">
+      <li><strong>It … that</strong> — relative vs conjunction in apposition</li>
+      <li><strong>It + infinitive</strong> — formal subject; infinitive is real subject</li>
+      <li><strong>It as formal object</strong> — infinitive/clause in apposition</li>
+    </ul>
+  </div>
+  <div class="article" data-art="445">
+    <h3>Ellipses</h3>
+    <p>Always supply what is understood. <em>He is stronger than I</em> → <em>Than I (am strong)</em>.</p>
+  </div>
+</section>
+
+<!-- SYNTAX -->
+<section id="syntax" class="chapter">
+  <div class="chapter-head">
+    <div class="kicker">Chapter XXXIX</div>
+    <h1>Syntax</h1>
+    <div class="sub" data-en="Rules governing how words correctly combine — beginning with subject–verb agreement." data-bn="Subject–Verb Agreement দিয়ে শুরু।"></div>
+  </div>
+  <div class="article" data-art="451">
+    <h3>Subject–Verb Agreement</h3>
+    <div class="rule">A verb must agree with its subject in number and person.
+      <div class="bn">Verb-কে Subject-এর Number ও Person অনুযায়ী মিলতে হবে।</div>
+    </div>
+    <ul class="examples">
+      <li>I <code>am</code> happy.</li>
+      <li>They <code>were</code> happy.</li>
+      <li>All <code>is</code> well.</li>
+    </ul>
+    <div class="note"><strong>Common pitfall —</strong> verb wrongly made to agree with the predicate noun instead of the true subject.</div>
+  </div>
+</section>
+
+<!-- QUESTION BANK -->
+<section id="qbank" class="chapter">
+  <div class="chapter-head">
+    <div class="kicker" data-en="Exercises 52 – 64" data-bn="অনুশীলনী ৫২ – ৬৪"></div>
+    <h1 data-en="Question Bank" data-bn="প্রশ্নভাণ্ডার"></h1>
+    <div class="sub" data-en="Every exercise grouped by topic. Open a part to practice; tap Answer to check." data-bn="বিষয়ভিত্তিক অনুশীলনী। উত্তর দেখতে Answer ট্যাপ করুন।"></div>
+  </div>
+  <div class="qb-toc" id="qbToc"></div>
+  <div id="qbContainer"></div>
+</section>
+</main>
+<button id="toTop" aria-label="Back to top">↑</button>
+<footer class="pagefoot">A Text-Book of Higher English Grammar · Chapters XXXIII–XXXIX · Offline-ready</footer>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
